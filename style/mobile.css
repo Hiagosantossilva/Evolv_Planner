@@ -1,12 +1,18 @@
 /*Mobile*/
 
 @media screen and (max-width: 1350px){
+    main{
+        margin-top: 0 !important;
+        padding-top: 0;
+    }
+
     #nameRoadmap{
         max-width: 100%;
-        font-size: 20px !important;
+        font-size: 18px !important;
+        margin-bottom: 0;
     }
     .nomeRoadmap p{
-        margin-top: 100px;
+        margin-top: 80px;
 
     }
     .nomeRoadmap input{
