@@ -82,6 +82,7 @@ p{
 .nomeRoadmap{
     padding: 15px;
     display: flex;
+
 }
 
 .nomeRoadmap input:focus{
@@ -95,6 +96,8 @@ p{
     font-size: 25px;
     border: 0;
     border-radius: 0 !important;
+    width: 50vw;
+
 }
 
 .salvarNomeRoadmapStyle{
