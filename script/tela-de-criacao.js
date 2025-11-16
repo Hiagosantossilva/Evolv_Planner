@@ -25,6 +25,9 @@ function criarTarefa() {
         <p>
             <label for="pontos">Pontos</label>
             <input type="number" name="pontos" id="pontos" min="1" max="10" value="1">
+        </p>
+
+        <p>
 
             <label for="data">Data</label>
             <input type="datetime-local" name="data" id="data">
