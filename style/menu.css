@@ -22,12 +22,11 @@
     text-align: left;
     margin-left: 0;
     margin: auto;
-    width: 200px;
 
 }
 
 #menu img{
-    max-width: 120px;
+    max-width: 100px;
 }
 #menu a,
 #menu button {
