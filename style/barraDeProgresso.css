@@ -36,3 +36,21 @@
     width: 100px;
     margin: 15px;
 }
+
+
+@media (max-width: 899px) {
+  #barraDeProgressoUl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+  }
+  .liBarra{
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+    .liProgresso{
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
