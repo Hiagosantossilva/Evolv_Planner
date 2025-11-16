@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Planner</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style/mobile.css">
+    <link rel="stylesheet" href="style/menuMobile.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/barraDeProgresso.css">
+    <link rel="stylesheet" href="style/tabelas.css">
+
+    <link rel="shortcut icon" href="midias/image/logo-icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/tarefaAtrasada.css">
+    <link rel="stylesheet" href="configuracoes/reset.css">
+
+</head>
+
+<body>
+
+    <!-- =============================== -->
+    <!-- Menu -->
+    <!-- =============================== -->
+    <nav id="menu">
+        <ul>
+            <li class="logo">
+                <p><img src="midias/image/logo-icone.png" alt="icone home"></p>
+            </li>
+            <!-- Home -->
+
+            <li>
+                <a href="index.html">
+                    <img src="midias/icon/home.svg" class="icon" alt="home">
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <!-- Exportar -->
+            <li>
+                <a href="#">
+                    <button onclick="exportarTarefas()">
+                        <img src="midias/icon/export.svg" class="icon" alt="export">
+                        <span>Exportar</span>
+                    </button>
+                </a>
+                
+            </li>
+          
+            <!-- Importar -->
+            <li>
+     
+                    <button onclick="document.getElementById('inputImportar').click()">
+                        <img src="midias/icon/import.svg" class="icon"  alt="import">
+                        <span>Importar</span>
+                    </button>
+                    <input type="file" id="inputImportar" accept=".json" style="display:none"
+                        onchange="importarTarefas(event)">
+            </li>
+            <li>
+                <a href="options.html">
+                    <button>
+                        <img src="midias/icon/options.svg" class="icon"  alt="options">
+                        <span>Configurações</span>
+                    </button>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <!-- =============================== -->
+    <!-- Cabeçalho: Nome do Roadmap      -->
+    <!-- =============================== -->
+    <header>
+        <div class="nomeRoadmap">
+            <p>
+                <input type="text" name="nameRoadmap" id="nameRoadmap"
+                       placeholder="Insira o nome do Roadmap">
+            </p>
+
+            <p>
+                <img src="midias/image/salvar-icone-colored.png"
+                     id="salvarNomeRoadmap"
+                     class="salvarNomeRoadmapStyle"
+                     alt="salvar nome"
+                     onclick="salvarRoadmap()">
+            </p>
+        </div>
+    </header>
+
+    <!-- =============================== -->
+    <!-- Conteúdo Principal              -->
+    <!-- =============================== -->
+    <main>
+
+        <!-- Criador de tarefas -->
+            <section class="CriadorSection">
+                <ul class="opcoesCriador">
+                    <li>
+                        <button type="button" id="btnPadrao" class="btnCriar" onclick="criarTarefa()">
+                            <img src="midias/icon/check2.svg" alt="">Criar tarefa
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" id="btnPadrao" class="btnCriar" onclick="criarTabela()">
+                            <img src="midias/icon/table.svg" alt=""> Criar Tabela
+                        </button>
+
+                    </li>
+                </ul>
+
+                <!-- Onde as tarefas são criadas -->
+                <div id="criador"></div>
+            </section>
+
+            <!-- =============================== -->
+            <!-- Barra de Progresso             -->
+            <!-- =============================== -->
+            <ul id="barraDeProgressoUl">
+
+            <!-- Bandeira final -->
+            <li class="liBandeira">
+                <div class="bandeira">
+                    <img src="midias/image/flag.png" class="icon" id="bandeira" alt="bandeira da linha de chegada">
+                </div>
+            </li>
+
+            <!-- Texto de progresso -->
+            <li class="liProgresso">
+                <div id="contadorProgresso"></div>
+            </li>
+
+                <!-- Barra visual -->
+            <li class="liBarra">
+                <div class="barraDeProgresso">
+                    <div></div>
+                </div>
+            </li>
+  
+            </ul>
+            <hr>
+            <!-- =============================== -->
+            <!-- Lista de Tarefas (Roadmap)     -->
+            <!-- =============================== -->
+            <h1>Minhas Tarefas:</h1>
+
+            <section class="RoadmapSection">
+            <div id="Roadmap"></div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© Hiago Santos Silva - Planner Versão 2.0 - Disponível em: <a href="https://projeto-code-flix.vercel.app/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnV9lfVSHFyWamR65raFE9L2WSZvfr9a2OCDsOCw9ZtchLnPDTzkl6Ojtxue4_aem_T6fkAeTRIq_A0gde-lGtXA"> CodeFlix.com</a></p>
+    </footer>
+
+    <!-- =============================== -->
+    <!-- Scripts                         -->
+    <!-- =============================== -->
+     <!--<script src="script/tela-de-criacao.js"></script>-->
+    <script src="script/roadmap.js"></script>
+<script src="script/tela-de-criacao.js"></script>
+<script src="script/criar-tabela.js"></script>
+<script src="script/index.js"></script>
+<script src="script/contagem-de-pontos.js"></script>
+<script src="script/barra-de-progresso.js"></script>
+<script src="script/salvarRoadmap.js"></script>
+
+</body>
+</html>

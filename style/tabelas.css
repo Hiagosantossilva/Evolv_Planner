@@ -1,0 +1,52 @@
+/* Card de tabela reaproveitando o estilo do card de tarefa */
+.tabelaContainer {
+    /* já herda .tarefaContainer */
+    margin-top: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Wrapper pra tabela não colar nas bordas */
+.tabelaWrapper {
+    overflow-x: auto;
+}
+
+/* Tabela em si */
+.tabelaGerada {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 80%;
+
+}
+
+.tabelaGerada td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    min-width: 80px;
+    background-color: rgb(253, 254, 255);
+    text-align: center;
+}
+
+.tabelaGerada td:focus {
+    outline: 2px solid var(--cor0);
+    background-color: #fdf8f8;
+}
+
+/* Ações da tabela: mesma vibe dos botões de tarefa */
+.tabelaAcoes {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.botoesMover {
+    display: flex;
+    gap: 6px;
+}
+

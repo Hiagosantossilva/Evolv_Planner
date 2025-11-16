@@ -1,0 +1,29 @@
+/*Mobile*/
+
+@media screen and (max-width: 1350px){
+    #nameRoadmap{
+        max-width: 100%;
+    }
+    .nomeRoadmap p{
+        margin-top: 100px;
+
+    }
+    .nomeRoadmap input{
+        max-width: 300px;
+
+    }
+    main{
+        margin-left: 0px;
+    }
+    #menuLateral{
+        display: none;
+    }
+    .tarefaContainer{
+        columns: 1 !important;
+        
+    }
+
+    footer{
+        position: relative !important;
+    }
+}

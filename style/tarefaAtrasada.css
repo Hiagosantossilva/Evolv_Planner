@@ -1,0 +1,98 @@
+/* Fundo escurecido */
+.popupAtraso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+}
+
+/* Caixa do popup */
+.popupAtrasoBox {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    animation: popupScale 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.popupAtrasoBox h3 {
+    color: rgb(226, 60, 60);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popupAtrasoBox p {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* Botão fechar */
+.popupClose {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transition: .2s;
+}
+
+.popupClose:hover {
+    color: rgb(226, 60, 60);
+    transform: scale(1.2);
+}
+
+/* Animação */
+@keyframes popupScale {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.avisoAtrasoTopo {
+    width: 100%;
+    background-color: #ffdddd;
+    color: #c0392b;
+    text-align: center;
+    padding: 3px 0;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #e74c3c;
+    position: sticky;   /* fica grudado no topo do dashboard */
+    top: 0;
+    z-index: 999;
+}
+
+
+
+
+/* ------------------------------ */
+
+/* ------------------------------ */
+
+
+
+
+
+@media (max-width: 899px) {
+.avisoAtrasoTopo {
+    margin-top: 60px
+}
+}

@@ -1,0 +1,20 @@
+{
+  "nomeRoadmap": "Tarefas de hoje",
+  "roadmapItens": [
+    {
+      "tipo": "tabela",
+      "conteudo": "<table class=\"tabelaGerada\"><tbody><tr><td contenteditable=\"true\">asddasasd</td><td contenteditable=\"true\">asdasd</td></tr><tr><td contenteditable=\"true\">asasas</td><td contenteditable=\"true\">asdasd</td></tr><tr><td contenteditable=\"true\">as</td><td contenteditable=\"true\">asdsad</td></tr></tbody></table>"
+    },
+    {
+      "tipo": "tarefa",
+      "dados": {
+        "nome": "João Pedro Silva Neto",
+        "descricao": "",
+        "dataISO": null,
+        "dataFormatada": "-",
+        "pontos": 1,
+        "status": "Em andamento"
+      }
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+@charset "UTF-8";
+/* Estilos Globais */
+:root { 
+
+    /* === SUAS CORES ORIGINAIS === */
+    --cor0: #3a3a3a;        /* Cor principal */
+    --Cor1: ;               /* (não definida, deixei como está) */
+
+    /* === EXPANSÃO DO TEMA (mantendo sua lógica) === */
+
+    /* Cores de fundo */
+    --cor-bg: #ffffff;
+    --cor-bg2: #f5f5f5;
+
+    /* Cores de texto */
+    --cor-texto: #111111;
+    --cor-texto-suave: #666666;
+
+    /* Bordas */
+    --cor-borda: #dcdcdc;
+
+    /* Hover padrão */
+    --cor-hover: #00000020; /* preto com transparência */
+
+    /* Botões */
+    --btn-bg: var(--cor0);
+    --btn-bg-hover: #e45252;
+    --btn-text: #ffffff;
+
+    /* Menu */
+    --menu-bg: #eeeeee;
+    --menu-borda: var(--cor-borda);
+    --menu-item-hover: #d1d1d1;
+
+}
+
+/* Ícone dinâmico baseado na cor do pai */
+/* Todos os ícones ficam automaticamente da cor primária (--cor0) */
+
+
+
+*{
+    font-family: Calibrim, Arial, Helvetica, sans-serif ;
+    margin: 0;
+}
+
+button, input{
+    border-radius: 20px;
+}
+body{
+    background-color: var();
+}
+header{
+    padding: 5%;
+    padding-bottom: 0;
+    padding-top: 0;
+
+}
+main{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 100px;
+    padding: 5%;
+    padding-top: 0;
+}
+h1{
+    color: var(--cor0);
+    font-size: 19px;
+    padding: 17px;
+}
+h2{
+    font-size: 15px;
+    color: var(--cor0);
+}
+p{
+    font-size: 14px;
+    padding: 7px;
+}
+
+
+/* Header */
+
+.nomeRoadmap{
+    padding: 15px;
+    display: flex;
+}
+
+.nomeRoadmap input:focus{
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+#nameRoadmap{
+    font-weight: bolder;
+    color: var(--cor0);
+    font-size: 25px;
+    border: 0;
+    border-radius: 0 !important;
+}
+
+.salvarNomeRoadmapStyle{
+    height: 40px;
+}
+.salvarNomeRoadmapStyle:hover{
+    cursor: pointer;
+
+}
+
+/* ===========================
+   Criação de tarefas
+=========================== */
+.opcoesCriador {
+    gap: 10px;
+}
+.btnFecharCriador {
+    top: 10px;
+    background: transparent;
+    border: 1px solid rgb(184, 184, 184);
+    text-align: right;
+    justify-content: right;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--cor0);
+    cursor: pointer;
+
+    padding: 5px;
+    line-height: 1;
+    transition: .2s ease;
+}
+
+.btnFecharCriador:hover {
+    opacity: .6;
+    transform: scale(1.1);
+}
+
+section.CriadorSection {
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.041);
+    border: 1px solid rgb(224, 224, 224);
+    background-color: var(--cor-bg2);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+
+/* Inputs do formulário de criação */
+section.CriadorSection input {
+    padding: 15px;
+    border: 1px solid rgb(224, 224, 224);
+}
+.btnCriar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: var(--cor0);
+
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+}
+.btnCriar img {
+    width: 22px;
+    height: 22px;
+    /* Se quiser aplicar cor via CSS no SVG inline */
+    filter: brightness(0) invert(1);
+}
+
+.btnCriar:hover {
+    background-color: #222; /* ou var(--cor0) com opacity */
+    transform: translateY(-2px);
+}
+
+.btnCriar:active {
+    transform: scale(0.95);
+}
+/* Linha de opções do criador (título + botão, etc.) */
+ul.opcoesCriador {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;   /* evita espaçamento estranho padrão do navegador */
+    margin: 0;    /* idem */
+}
+
+li{
+    text-align: center;
+    margin-top: 10px;
+}
+#btnPadrao{
+    border: 0;
+    background-color: var(--cor0);
+    color: white;
+    padding: 12px;
+}
+#btnPadrao:hover{
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.548);
+    cursor: pointer;
+}
+#bntSalvar0{
+    background-color: rgb(45, 190, 45);
+}
+.nomeTarefa{
+    max-width: 60vw;
+    word-break: break-all;
+    justify-content: left;
+    text-align: left;
+}
+#descricao {
+    width: 70%;
+}
+/*Roadmap de tarefas*/
+p.dataTarefaEstilo{
+    font-weight: lighter;
+    font-size: 12px ;
+    color: gray;
+    
+}
+p.descricaoTarefaEstilo{
+    color: gray;
+    word-break: break-all;
+    justify-content: left;
+    text-align: justify;
+    max-width: 60vw;
+}
+.pontosTarefaEstilo{
+    background-color: var(--cor0);
+    padding: 12px;
+    margin: 7px;
+    font-size: 18px !important;
+    max-width: 200px;
+    align-items: left;
+}
+.selectBox{
+    margin: 7px;
+    border-radius: 15px !important;
+}
+
+.RoadmapSection{
+    margin-top: 55px;
+
+}
+/* =============================
+   CARD GAMIFICADO DAS TAREFAS
+============================= */
+
+.tarefaContainer {
+    background: #fff;
+    border-radius: 15px;                 /* mais moderno */
+    padding: 25px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.05); /* sombra suave estilo game card */
+    position: relative;
+    transition: 0.25s ease;
+}
+
+.tarefaContainer:hover {
+    transform: translateY(-4px);         /* card levanta igual card de jogo */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+
+/* Número da tarefa (ícone tipo badge / nível) */
+.iconTarefa {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+
+    width: 70px;
+    height: 70px;
+
+    background: var(--cor0);
+    border-radius: 15px 0 15px 0;        /* formato mais "game" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.iconTarefa p {
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Ajuste interno do conteúdo */
+.tarefaContainer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+
+/* Títulos e textos */
+.tarefaContainer h2 {
+    font-size: 20px;
+    color: #222;
+    margin: 5px 0;
+    margin: 6px;
+}
+
+p.dataTarefaEstilo {
+    font-size: 12px;
+    color: #888;
+}
+
+p.pontosTarefaEstilo {
+    background: var(--cor0);
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+}
+
+/* Botão excluir e mover */
+.btnTarefasOpcoes {
+    background: var(--cor0);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s;
+}
+.btnTarefasOpcoes img {
+    filter: brightness(0) invert(1); /* deixa branco */
+}
+
+.btnTarefasOpcoes:hover {
+    background: #222;
+}
+
+/* Setas de mover */
+.btnTarefasOpcoes img {
+    height: 12px;
+}
+
+
+/* Select de status */
+.selectBox {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: #fff;
+}
+
+
+
+.selectBox:hover{
+    cursor:pointer;
+}
+.movimentacao{
+    text-align: right;
+    justify-content: right;
+    display: flex;
+}
+.btnTarefasOpcoes{
+    background-color: var(--cor0);
+    color: white;
+    padding: 5px;
+    border: 0px;
+    margin: 7px;
+    align-items: center;
+    text-align: center;
+    
+}
+.btnTarefasOpcoes{
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 45px;
+    height: 45px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+
+}
+.btnTarefasOpcoes img{
+    height: 15px;
+    margin: 7px;
+}
+.btnTarefasOpcoes:hover{
+    cursor:pointer;
+    background-color: rgb(143, 143, 143);
+    transition: 0.2s;
+
+}
+
+.optionStatus{
+    font-size: 15px;
+}
+
+/* Estilo atual + animação verde suave */
+#Concluida {
+    color: rgb(143, 143, 143);
+    text-decoration: line-through;
+    font-weight: bolder;
+    background-color: rgb(160, 160, 161);
+
+    /* 🔥 Animação de gradiente verde */
+    background: linear-gradient(
+        120deg,
+        rgba(0, 255, 150, 0.10),
+        rgba(0, 200, 120, 0.20),
+        rgba(0, 255, 150, 0.10)
+    );
+    background-size: 200% 200%;
+    animation: brilhoVerde 6s ease infinite;
+
+    border-radius: 7px;
+}
+
+/* Cor dos textos dentro */
+
+
+#Concluida p {
+    color: rgb(172, 172, 172);
+    text-decoration: line-through;
+}
+
+
+/* 🌟 Keyframes do movimento */
+@keyframes brilhoVerde {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+#Pendente{
+    color: red;
+    background-color: rgb(255, 225, 225);
+
+}
+
+/* Footer */
+footer{
+    background-color: white;
+    margin-bottom: 30px !important;
+    text-align: center;
+    width: 96vw;
+    margin: auto;
+    margin-left: -20px !important;
+}
+@media (max-width: 899px) {
+ footer{
+    margin-left: 0!important;
+}
+}
