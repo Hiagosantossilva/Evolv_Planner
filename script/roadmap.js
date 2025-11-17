@@ -272,16 +272,20 @@ function verificarAtrasos() {
 
     itens.forEach((item, index) => {
         if (item.tipo !== "tarefa") return;
+        
         const tarefa = item.dados;
-
         if (!tarefa.dataISO) return;
 
         const data = new Date(tarefa.dataISO);
-        if (isNaN(data.getTime())) return;
 
+        // 🔥 1 — Se estiver concluída, nunca altera
+        if (tarefa.status === "Concluida") return;
+
+        // 2 — Lógica de atraso normal
         if (data < agora) {
             atrasadas++;
 
+            // 🔥 3 — Só marca como atrasada se NÃO for concluída
             if (tarefa.status !== "Pendente") {
                 itens[index].dados.status = "Pendente";
                 alterouAlgo = true;
@@ -289,10 +293,10 @@ function verificarAtrasos() {
         }
     });
 
-    if (alterouAlgo) {
+    if (alterouAlgo)
         setRoadmapItens(itens);
-    }
 
+    // mensagens
     if (atrasadas > 0) {
         mostrarAvisoTopo(atrasadas);
         verificarIntervaloPopup(atrasadas);
